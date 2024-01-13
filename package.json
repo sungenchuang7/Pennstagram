@@ -9,6 +9,10 @@
     "lint": "eslint --ext .jsx --ext .js backend --ignore-pattern *.test.js --ignore-pattern *.test.jsx ",
     "build": "npm install && cd frontend && npm install && npm run build"
   },
+  "engines": {
+    "node": "20.9.0",
+    "npm": "10.1.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {

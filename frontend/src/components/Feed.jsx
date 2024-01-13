@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import { Space } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -21,10 +22,9 @@ function Feed({
   }, [posts]);
 
   const items = posts.map((post) => (
-      // eslint-disable-next-line no-underscore-dangle
+    // eslint-disable-next-line no-underscore-dangle
     <div key={post._id} style={{ marginBottom: '20px' }}>
       <Post
-          {/* eslint-disable-next-line no-underscore-dangle */}
         id={post._id}
         avatar={post.avatar || ''}
         text={post.text || ''}

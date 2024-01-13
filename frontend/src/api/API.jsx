@@ -8,7 +8,13 @@ const prefix = 'api/';
 //   ? 'http://localhost:8080'
 //   : '';
 // const domain = process.env.REACT_APP_API_DOMAIN || '';
-const domain = 'http://localhost:8080';
+// const domain = 'http://localhost:8080';
+
+// const domain = process.env.NODE_ENV === 'development'
+//   ? 'http://localhost:8080'
+//   : '';
+
+const domain = process.env.REACT_APP_API_DOMAIN || '';
 
 export function setHeaders() {
   axios.defaults.headers.common.Authorization = localStorage.getItem('app-token');

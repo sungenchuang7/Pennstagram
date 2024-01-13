@@ -27,6 +27,7 @@
     "supertest": "^6.3.3"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.23.6",
     "babel-jest": "^29.7.0",
     "eslint": "^8.53.0",

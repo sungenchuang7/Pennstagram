@@ -1,0 +1,25 @@
+#userAvatar{
+    height: 100px;
+    width: 100px;
+}
+
+.posts{
+    width: 10%;
+    height: 10%;
+}
+
+.cardgroupd{
+    width: 70%;
+    height: 70%;
+}
+
+#img{
+    width:30%;
+}
+
+#mainView{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}

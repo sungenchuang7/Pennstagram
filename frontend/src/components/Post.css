@@ -1,0 +1,49 @@
+#post{
+    width: 600px;
+    border: 1px solid darkgray;
+    border-radius: 12px;
+    padding: 20px
+}
+
+.container{
+    width: 500px;
+    height: auto;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container iframe {
+    width: 500px;
+    height: 500px;
+}
+
+.postInfoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 20px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+.postUserName{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.postUserID {
+    font-size: 14px;
+    font-weight: 500
+}
+
+.postTime {
+    font-size: 14px;
+    color: rgb(161 161 170);
+}
+.videoPlayer {
+    border: 3px solid black;
+}

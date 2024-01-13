@@ -87,6 +87,7 @@ function HomePage() {
       let resolvedHiddenPosts = await Promise.all(hiddenPosts);
       resolvedHiddenPosts = resolvedHiddenPosts.map((item) => item.data[0]);
       // numberOfHiddenPosts = postsToHide.length;
+      // eslint-disable-next-line no-underscore-dangle
       const jsonIdUser = res._id;
       await patchUserData(jsonIdUser, { hiddenPosts: [] });
       const newPost = activityFeed.concat(resolvedHiddenPosts);

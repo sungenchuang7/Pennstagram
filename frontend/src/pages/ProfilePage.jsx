@@ -4,10 +4,11 @@ import {
   message,
 } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
-import Topbar from '../components/TopBar';
-import Profile from '../components/Profile';
-import Feed from '../components/Feed';
-import { getUserData, getProfilepagePost } from '../api/API';
+import Topbar from '../components/TopBar.jsx';
+import Profile from '../components/Profile.jsx';
+// eslint-disable-next-line import/no-named-as-default,import/no-named-as-default-member
+import Feed from '../components/Feed.jsx';
+import { getUserData, getProfilepagePost } from '../api/API.jsx';
 
 function ProfilePage() {
   const navigate = useNavigate();

@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import bannerImage from './resources/university-of-pennsylvania-logo.png';
 import upennCampus from './resources/upennCampus.png';
 import './SignUpPage.css';
-import AvatarUploader from '../components/AvatarUploader';
-import { createNewUser } from '../api/API';
+import AvatarUploader from '../components/AvatarUploader.jsx';
+import { createNewUser } from '../api/API.jsx';
 
 function SignUp() {
   const [imageUrl, setImageUrl] = useState('');

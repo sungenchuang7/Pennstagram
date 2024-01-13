@@ -4,7 +4,7 @@ import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import { message, Space } from 'antd';
 import PropTypes from 'prop-types';
 import VideocamIcon from '@mui/icons-material/Videocam';
-import { uploadFile, newPosts } from '../api/API';
+import { uploadFile, newPosts } from '../api/API.jsx';
 
 function Share({ userData, activityFeed, setActivityFeed }) {
   const [files, setFiles] = useState(undefined);
@@ -62,6 +62,7 @@ function Share({ userData, activityFeed, setActivityFeed }) {
 
       // await axios.post('http://localhost:5001/posts', object);
       const response = await newPosts(object);
+      // eslint-disable-next-line no-underscore-dangle
       object._id = response.data.id;
       const newActivityFeed = [...activityFeed, object].sort((a, b) => {
         const dateA = new Date(a.time);

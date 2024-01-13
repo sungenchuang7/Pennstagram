@@ -3,7 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Input, message } from 'antd';
 import bannerImage from '../pages/resources/university-of-pennsylvania-logo.png';
-import { getUserData } from '../api/API';
+import { getUserData } from '../api/API.jsx';
 
 function TopBar() {
   const userID = localStorage.getItem('userID');

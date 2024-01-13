@@ -5,10 +5,10 @@ import {
 import './Post.css';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { deletePost, getUserData, patchUserData } from '../api/API';
-import Like from './Like';
-import CommentBox from './CommentBox';
-import EditPostButton from './EditPostButton';
+import { deletePost, getUserData, patchUserData } from '../api/API.jsx';
+import Like from './Like.jsx';
+import CommentBox from './CommentBox.jsx';
+import EditPostButton from './EditPostButton.jsx';
 
 function Post({
   // eslint-disable-next-line max-len
@@ -18,6 +18,7 @@ function Post({
     try {
       const result = await deletePost(fileName, id);
       if (result[1].status === 200) {
+        // eslint-disable-next-line no-underscore-dangle
         const newPost = posts.filter((element) => element._id !== id);
         setPosts(newPost);
         message.success('Deleted');
@@ -36,6 +37,7 @@ function Post({
       postsToHide.push(id);
       // res = await getUserData(loggedInUserID);
       // [res] = res.data;
+      // eslint-disable-next-line no-underscore-dangle
       const jsonIdUser = res._id;
 
       await patchUserData(jsonIdUser, { hiddenPosts: postsToHide });
@@ -49,6 +51,7 @@ function Post({
       //   setPosts(newPost);
       //   message.success('Post is successfully hidden!');
       // }
+      // eslint-disable-next-line no-underscore-dangle
       const newPost = posts.filter((element) => element._id !== id);
       setPosts(newPost);
       message.success('Post is successfully hidden!');

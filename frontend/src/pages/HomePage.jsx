@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, message, Space } from 'antd';
-import Topbar from '../components/TopBar';
-import Feed from '../components/Feed';
+import Topbar from '../components/TopBar.jsx';
+// eslint-disable-next-line import/no-named-as-default,import/no-named-as-default-member
+import Feed from '../components/Feed.jsx';
 import './HomePage.css';
-import Share from '../components/Share';
+import Share from '../components/Share.jsx';
 import {
   getHomepagePost, getPost, getUserData, patchUserData,
-} from '../api/API';
+} from '../api/API.jsx';
 
 function HomePage() {
   const [userData, setUserData] = useState(null);

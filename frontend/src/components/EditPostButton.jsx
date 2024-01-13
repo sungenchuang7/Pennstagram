@@ -5,12 +5,13 @@ import {
 import PropTypes from 'prop-types';
 import AddAPhotoIcon from '@mui/icons-material/AddAPhoto';
 import VideocamIcon from '@mui/icons-material/Videocam';
-import { deleteFile, patchPostData, uploadFile } from '../api/API';
+import { deleteFile, patchPostData, uploadFile } from '../api/API.jsx';
 
 function EditPostButton({
   activityFeed, setActivityFeed, id, fileName,
 }) {
   const activityFeedCopy = [...activityFeed];
+  // eslint-disable-next-line no-underscore-dangle
   const [post] = activityFeedCopy.filter((element) => element._id === id);
   const [open, setOpen] = useState(false);
   const [files, setFiles] = useState(undefined);
@@ -58,6 +59,7 @@ function EditPostButton({
       } catch (e) {
         message.error(`Unable to modify the post, error: ${e.message}`);
       }
+      // eslint-disable-next-line no-underscore-dangle
       const newActivityFeed = activityFeedCopy.filter((element) => element._id !== id);
       post.url = object.url;
       post.text = object.text;

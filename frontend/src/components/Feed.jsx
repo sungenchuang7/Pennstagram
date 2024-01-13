@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Space } from 'antd';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import PropTypes from 'prop-types';
-import Post from './Post';
+import Post from './Post.jsx';
 import './Feed.css';
 
 function Feed({
@@ -21,8 +21,10 @@ function Feed({
   }, [posts]);
 
   const items = posts.map((post) => (
+      // eslint-disable-next-line no-underscore-dangle
     <div key={post._id} style={{ marginBottom: '20px' }}>
       <Post
+          {/* eslint-disable-next-line no-underscore-dangle */}
         id={post._id}
         avatar={post.avatar || ''}
         text={post.text || ''}

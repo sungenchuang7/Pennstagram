@@ -4,7 +4,7 @@ import {
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import FollowUnfollowButton from './FollowUnfollowButton';
+import FollowUnfollowButton from './FollowUnfollowButton.jsx';
 
 function Profile({
   profilePageUserFollowers,

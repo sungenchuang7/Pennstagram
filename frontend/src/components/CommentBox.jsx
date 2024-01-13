@@ -4,7 +4,7 @@ import {
 } from 'antd';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { patchPostData } from '../api/API';
+import { patchPostData } from '../api/API.jsx';
 
 // id here refers to the post id assigned by MongoDB
 function CommentBox({ commentList, id, loggedInUserID }) {

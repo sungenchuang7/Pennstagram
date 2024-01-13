@@ -3,7 +3,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import IconButton from '@mui/material/IconButton';
 import { message } from 'antd';
 import PropTypes from 'prop-types';
-import { patchPostData } from '../api/API';
+import { patchPostData } from '../api/API.jsx';
 
 // id here refers to the post id assigned by MongoDB
 function Like({ likeList, id, loggedInUserID }) {

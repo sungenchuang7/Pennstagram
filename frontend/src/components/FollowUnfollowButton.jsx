@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, message } from 'antd';
 import PropTypes from 'prop-types';
-import { getUserData, patchUserData } from '../api/API';
+import { getUserData, patchUserData } from '../api/API.jsx';
 
 function FollowUnfollowButton(
   {
@@ -24,6 +24,7 @@ function FollowUnfollowButton(
     const ownAvatar = res.avatar || '';
     const ownUserName = res.userName || '';
     const followingList = res.followings || [];
+    // eslint-disable-next-line no-underscore-dangle
     const jsonIdLoggedInUser = res._id;
 
     if (followingState === 'Following') {
@@ -43,6 +44,7 @@ function FollowUnfollowButton(
         res = await getUserData(userID);
         [res] = res.data;
         let followedList = res.followers || [];
+        // eslint-disable-next-line no-underscore-dangle
         const jsonIdUser = res._id;
         followedList = followedList.filter((followed) => followed.userID !== loggedInUserID);
         setProfilePageUserFollowers(followedList);
@@ -64,6 +66,7 @@ function FollowUnfollowButton(
         const avatar = res.avatar || '';
         const userName = res.userName || '';
         const followedList = res.followers || [];
+        // eslint-disable-next-line no-underscore-dangle
         const jsonIdUser = res._id;
         const concatenated = followingList.concat([{ userID, userName, avatar }]);
         // console.log('--followingList', concatenated);

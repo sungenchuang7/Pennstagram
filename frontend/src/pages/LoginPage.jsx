@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import bannerImage from './resources/university-of-pennsylvania-logo.png';
 import upennCampus from './resources/upennCampus.png';
 import './LoginPage.css';
-import { loginAPI } from '../api/API';
+import { loginAPI } from '../api/API.jsx';
 
 function LogIn() {
   const navigate = useNavigate(); // initialize useNavigate

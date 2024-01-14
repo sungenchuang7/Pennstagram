@@ -27,7 +27,7 @@ webapp.use(express.urlencoded({ extended: true }));
 // webapp.use(express.bodyParser({ limit: '50mb' }));
 webapp.use(bodyParser.json({ limit: '50mb' })); // Set limit to a higher value like 10mb
 webapp.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
-webapp.use(express.static(path.join(__dirname, '../frontend/build')));
+webapp.use(express.static(path.join(__dirname, './frontend/build')));
 const prefix = '/api';
 
 webapp.post(`${prefix}/login`, async (req, resp) => {

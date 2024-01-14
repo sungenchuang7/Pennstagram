@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { message } from 'antd';
-// import { env } from '../../.eslintrc';
 
 const prefix = 'api/';
 
@@ -146,6 +145,7 @@ export async function deleteFile(fileName) {
 }
 
 export function loginAPI(userID, password) {
+  console.log('Sending to: ', `${domain}/${prefix}login`);
   return axios.post(`${domain}/${prefix}login`, { userID, password });
 }
 

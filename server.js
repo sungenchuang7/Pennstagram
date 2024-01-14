@@ -66,6 +66,7 @@ webapp.post(`${prefix}/login`, async (req, resp) => {
       resp.status(401).json({ error: 'Wrong user info' });
     }
   } catch (err) {
+    console.log('WTF: shit happened.');
     resp.status(401).json({ error: err.message });
   }
 });
